@@ -3,9 +3,9 @@ import '../styles/App.css';
 
 
 const getData =  () =>{
-  const rawData =  fetch('https://jsonplaceholder.typicode.com/todos')
-  const data =  rawData.json()
-  return data
+  const rawData = await fetch('https://jsonplaceholder.typicode.com/todos')
+  const data = await rawData.json();
+  return data;
 }
 const App = () => {
   const [todos,setTodos] = useState([])
